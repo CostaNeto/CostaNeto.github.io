@@ -9,8 +9,8 @@ const countries = document.querySelectorAll(".country");
 const phone = document.querySelector(".phone");
 const projectContainer = document.querySelector(".projects");
 
-// HOME------------------------------------------
-// home message transition
+// Intersection observers
+// observer for home section
 const revealOptions = {
 	threshold: 0,
 };
@@ -25,6 +25,44 @@ const reveal = new IntersectionObserver(function (entries) {
 	});
 }, revealOptions);
 
+// observer for items in portfolio, tech and about sections
+// when in mobile mode (portrait)
+const itemReveal = new IntersectionObserver(function (
+	entries,
+	portfolioReveal
+) {
+	entries.forEach((entry) => {
+		if (!entry.isIntersecting) {
+			return;
+		} else {
+			entry.target.classList.add("reveal");
+			portfolioReveal.unobserve(entry.target);
+		}
+	});
+},
+revealOptions);
+
+// observer for countries
+const countryRevealOptions = {
+	threshold: 0.7,
+};
+
+const countryReveal = new IntersectionObserver(function (
+	entries,
+	countryReveal
+) {
+	entries.forEach((entry) => {
+		if (!entry.isIntersecting) {
+			return;
+		} else {
+			countries.forEach((country) => country.classList.add("reveal"));
+			countryReveal.unobserve(entry.target);
+		}
+	});
+},
+countryRevealOptions);
+
+// home message transition
 reveal.observe(homeMessage);
 
 // change opacity of home page and banners
@@ -63,25 +101,8 @@ const changeOpacity = (element, elemHeight) => {
 		},
 	});
 };
-// HOME------------------------------------------
 
-// PORTFOLIO------------------------------------
-// reveal projects
-const itemReveal = new IntersectionObserver(function (
-	entries,
-	portfolioReveal
-) {
-	entries.forEach((entry) => {
-		if (!entry.isIntersecting) {
-			return;
-		} else {
-			entry.target.classList.add("reveal");
-			portfolioReveal.unobserve(entry.target);
-		}
-	});
-},
-revealOptions);
-
+// reveal projects in mobile mode (portrait)
 projects.forEach((project) => {
 	itemReveal.observe(project);
 });
@@ -158,44 +179,22 @@ const changedetails = (appTitle, appDescription, appLink, appVideo) => {
 	// demo video
 	$("#app-demo").attr("src", appVideo);
 };
-// PORTFOLIO------------------------------------
 
-// TECHNOLOGIES---------------------------------
+// reveal projects and phone when in mobile mode (landscape)
+itemReveal.observe(projectContainer);
+itemReveal.observe(phone);
+
+// reveal tech fields
 fields.forEach((field) => {
 	itemReveal.observe(field);
 });
-itemReveal.observe(phone);
-itemReveal.observe(projectContainer);
-// TECHNOLOGIES---------------------------------
 
-// ABOUT----------------------------------------
+// reveal the about message
 itemReveal.observe(aboutHeader);
 
-const countryRevealOptions = {
-	threshold: 0.7,
-};
-
-const countryReveal = new IntersectionObserver(function (
-	entries,
-	countryReveal
-) {
-	entries.forEach((entry) => {
-		if (!entry.isIntersecting) {
-			return;
-		} else {
-			countries.forEach((country) => country.classList.add("reveal"));
-			countryReveal.unobserve(entry.target);
-		}
-	});
-},
-countryRevealOptions);
-
+// reveal the countries
 if (window.innerWidth < 1024) {
 	itemReveal.observe(countryCountainer);
 } else {
 	countryReveal.observe(countryCountainer);
 }
-// ABOUT----------------------------------------
-
-// CONTACT--------------------------------------
-// CONTACT--------------------------------------
