@@ -1,0 +1,914 @@
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&display=swap);
+
+:root {
+	--color-soft-black: #151515;
+	--color-linkedin-hover: #2282f8;
+	--color-linkedin: #3468a8;
+	--color-gold: #ca914e;
+	--color-gold2: #e99b42;
+	--color-email: #bbbbbb;
+	--color-soft-gray: #dedede;
+	--color-gray: #cbcbcb;
+	--color-darker-white: #f0f0f0;
+}
+@font-face {
+	font-family: Coves-Bold;
+	src: url(/fonts/Coves\ Bold.woff) format("woff");
+}
+@font-face {
+	font-family: Coves-Light;
+	src: url(/fonts/Coves\ Light.woff) format("woff");
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	position: relative;
+	min-height: 100vh;
+	background-color: black;
+}
+main {
+	display: flex;
+	flex-direction: column;
+}
+.holder {
+	max-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.banner {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	background-color: var(--color-soft-black);
+}
+.banner p,
+#contact-header {
+	width: 90%;
+	font-family: Coves-Bold;
+	font-size: 3em;
+	letter-spacing: 1.5em;
+	color: var(--color-gold2);
+	text-align: center;
+}
+.page-content {
+	width: 100%;
+	background-color: var(--color-darker-white);
+	display: flex;
+	align-items: center;
+	z-index: 1;
+	overflow: hidden;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.content {
+	width: 90%;
+	height: 85%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+/*HOME SECTION*/
+#home-holder {
+	background-color: var(--color-soft-black);
+}
+#home {
+	height: 100vh;
+	background-color: var(--color-soft-black);
+}
+.home-message-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+#signature-and-occupation {
+	width: 100%;
+	text-align: center;
+}
+#signature {
+	margin-bottom: 5%;
+}
+#home-picture {
+	background-image: url(/images/hero_costa.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+#occupation p {
+	color: var(--color-gold);
+	font-family: Coves-Bold;
+	text-align: center;
+}
+
+/*PORTFOLIO*/
+.project-link {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--color-gold);
+	border-radius: 50px;
+	transition: 0.2s;
+}
+.project-link a {
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: var(--color-gold);
+	transition: 0.5s;
+}
+.project-link:hover {
+	background-color: var(--color-gold);
+}
+.project-link:hover a {
+	color: white;
+}
+
+/* TECHNOLOGIES SECTION */
+#technologies-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.field {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100px;
+}
+.field p {
+	font-family: Coves-Bold;
+	font-size: 30px;
+	text-align: center;
+	padding: 1%;
+	color: var(--color-gold);
+	letter-spacing: 0.2em;
+}
+.tech {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.tech-icon {
+	width: 100%;
+	margin-bottom: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tech-icon img {
+	width: 30%;
+}
+.tech-name {
+	font-family: Coves-Light;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+/* ABOUT SECTION */
+#about-content {
+	flex-direction: column;
+}
+.about-header {
+	font-family: Coves-Light;
+}
+.country-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.country {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	transition: background-image 0.5s;
+}
+.sao-tome {
+	background-image: url(/images/countries/caue-stp.png);
+}
+.sao-tome:hover {
+	background-image: url(/images/countries/caue-stp-dark.png);
+}
+.taiwan-roc {
+	background-image: url(/images/countries/taipei-tw.png);
+}
+.taiwan-roc:hover {
+	background-image: url(/images/countries/taipei-tw-dark.png);
+}
+.china {
+	background-image: url(/images/countries/tianjin-ch.png);
+}
+.china:hover {
+	background-image: url(/images/countries/tianjin-ch-dark.png);
+}
+.portugal {
+	background-image: url(/images/countries/lisbon-pt.png);
+}
+.portugal:hover {
+	background-image: url(/images/countries/lisbon-pt-dark.png);
+}
+.information {
+	width: 70%;
+	display: none;
+}
+.information h5 {
+	font-family: Coves-Bold;
+	font-size: 2em;
+	color: var(--color-gold);
+	margin-bottom: 10%;
+	text-align: center;
+}
+.information p {
+	font-family: Coves-Light;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+}
+.country:hover .information {
+	display: flex;
+	flex-direction: column;
+}
+/* CONTACT SECTION */
+#contact {
+	height: 100vh;
+	background-color: var(--color-soft-black);
+}
+#contact-content {
+	display: flex;
+	flex-direction: column;
+}
+#contact-header {
+	text-align: center;
+	position: relative;
+}
+#contact-options {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.contact-option {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-option a {
+	width: 250px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	border-radius: 50px;
+	font-family: Coves-Bold;
+	font-size: 1.5em;
+	letter-spacing: 10px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+#linkedin {
+	color: white;
+	background-color: var(--color-linkedin);
+}
+#email {
+	color: var(--color-soft-black);
+	background-color: var(--color-email);
+}
+#linkedin:hover {
+	background-color: var(--color-linkedin-hover);
+}
+#email:hover {
+	background-color: white;
+}
+
+/* FOOTER */
+#footer {
+	width: 100%;
+	color: rgb(85, 85, 85);
+	font-family: Coves-light;
+	font-size: 25px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	padding: 10px 0 10px 0;
+	z-index: 1;
+}
+
+@media only screen and (min-width: 320px) {
+	.banner p,
+	#contact-header {
+		font-family: Coves-Bold;
+		font-size: 1.5em;
+		letter-spacing: 0.4em;
+		padding-left: 0.8em;
+	}
+	.home-message-container {
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+	.home-message-container,
+	.project,
+	.field,
+	.about-header,
+	.country-container {
+		opacity: 0;
+		transform: scale(0.5);
+		transition: opacity 1s, transform 1.5s;
+		transition-delay: 0.2s;
+	}
+	.home-message-container.reveal,
+	.project.reveal,
+	.field.reveal,
+	.about-header.reveal,
+	.country-container.reveal {
+		opacity: 1;
+		transform: scale(1);
+	}
+	#home-picture {
+		width: 70%;
+		height: 70%;
+	}
+	#signature img {
+		width: 60%;
+	}
+	#occupation p {
+		font-size: 1.5em;
+		letter-spacing: 0.3em;
+	}
+	#portfolio,
+	#technologies {
+		height: 300vh;
+	}
+	.projects {
+		width: 90%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.project {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 2em;
+	}
+	.project img {
+		width: 50%;
+		margin-bottom: 10%;
+	}
+	.project-details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.project-details p,
+	a {
+		font-family: Coves-Light;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	.project-link {
+		width: 50%;
+		margin-top: 10px;
+	}
+	.project-link a {
+		padding: 5px;
+	}
+	#description,
+	.phone {
+		display: none;
+	}
+	.field {
+		width: 100%;
+	}
+	.field p {
+		margin-bottom: 10%;
+	}
+	.tech-container {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 40vw 40vw;
+		row-gap: 50px;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		justify-content: center;
+	}
+	.tech-container.github {
+		grid-template-columns: 40vw;
+	}
+	#about-content {
+		height: 100%;
+	}
+	#about {
+		height: 450vh;
+	}
+	.about-header {
+		font-size: 1.5em;
+		text-align: center;
+		padding: 10%;
+	}
+	.country-container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	.country {
+		width: 90%;
+		height: 20%;
+	}
+	#contact-header {
+		bottom: 20%;
+	}
+	.contact-option {
+		width: 80%;
+	}
+	.contact-option a {
+		height: 70px;
+	}
+	#option1 {
+		margin-bottom: 50px;
+	}
+	#footer {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	.banner p,
+	#contact-header {
+		font-size: 2em;
+		letter-spacing: 0.5em;
+	}
+	#signature img {
+		width: 70%;
+	}
+	#occupation p {
+		font-size: 1.5em;
+	}
+	.project img {
+		width: 40%;
+		margin-bottom: 15%;
+	}
+	.project-details p {
+		font-family: Coves-Light;
+		font-size: 2em;
+	}
+	.about-header {
+		font-size: 2em;
+		margin-top: 5%;
+	}
+	.information {
+		width: 50%;
+	}
+	#footer {
+		font-size: 25px;
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	#signature img {
+		width: 50%;
+	}
+	.banner p,
+	#contact-header {
+		font-size: 2.5em;
+	}
+	#occupation p {
+		font-size: 2em;
+	}
+	.project img {
+		width: 20%;
+	}
+	.project-details p,
+	a {
+		font-size: 2.5em;
+	}
+	.field p {
+		font-size: 2.5em;
+	}
+	.tech-name {
+		font-size: 2em;
+	}
+	.about-header {
+		font-size: 2.5em;
+	}
+	.country {
+		width: 80%;
+	}
+	.information {
+		width: 30%;
+	}
+	.information h5 {
+		font-size: 1.5em;
+	}
+	.information p {
+		font-size: 1.5em;
+	}
+	#footer {
+		font-size: 40px;
+	}
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+	.banner p,
+	#contact-header {
+		font-family: Coves-Bold;
+		font-size: 2.5em;
+		letter-spacing: 1em;
+		padding-left: 1em;
+	}
+	#signature-and-occupation {
+		width: 40%;
+	}
+	#home-picture {
+		width: 50%;
+		height: 90%;
+	}
+	#signature img {
+		width: 100%;
+		position: relative;
+		left: 5%;
+	}
+	#occupation p {
+		font-size: 2em;
+		letter-spacing: 0.2em;
+	}
+	#portfolio-content {
+		justify-content: space-between;
+	}
+	.projects {
+		max-width: 30vw;
+		max-height: 30vw;
+		height: auto;
+		display: grid;
+		grid-template-columns: 12.5vw 12.5vw;
+		grid-gap: 2vw;
+		opacity: 0;
+		transform: translate(-50%, -40%) rotateZ(-45deg);
+		transform-origin: bottom left;
+		transition: opacity 2s, transform 1.5s;
+		transition-delay: 1s;
+	}
+	.project {
+		padding: 15%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		transition: background-color 0.5s;
+	}
+	.project:hover {
+		background-color: var(--color-soft-gray);
+	}
+	.project.active {
+		background-color: var(--color-gray);
+	}
+	.project img {
+		width: 100%;
+		margin: 0;
+	}
+	.project-details {
+		display: none;
+	}
+	#description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 30vw;
+		color: var(--color-soft-black);
+		font-family: Coves-Light;
+		font-size: 1.5em;
+		text-align: center;
+		margin-right: 5%;
+	}
+	#description p {
+		height: 100px;
+	}
+	#app-title {
+		font-family: Coves-Bold;
+	}
+	.project-link {
+		display: none;
+	}
+	.project-link a {
+		padding: 15px;
+		font-size: 1.5rem;
+	}
+	.phone {
+		width: 20vw;
+		height: 80vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-items: center;
+		position: relative;
+		opacity: 0;
+		transform: translate(50%, -40%) rotateZ(45deg);
+		transform-origin: bottom right;
+		transition: opacity 2s, transform 1.5s;
+		transition-delay: 1s;
+	}
+	.projects.reveal,
+	.phone.reveal {
+		opacity: 1;
+		transform: translateX(0) rotateZ(0);
+	}
+	#app-demo {
+		height: 100%;
+	}
+	#white-layer {
+		width: 140%;
+		height: 100%;
+		position: absolute;
+		right: 50%;
+		top: 50%;
+		transform: translateX(50%) translateY(-50%);
+		border: 40px solid var(--color-darker-white);
+		border-radius: 80px;
+		transition: background-color 1s;
+	}
+	#phone-outline {
+		height: 105%;
+		right: 50%;
+		top: 50%;
+		transform: translateX(50%) translateY(-50%);
+		position: absolute;
+	}
+	.field {
+		width: 30%;
+		height: 20%;
+		transition: 0.5s;
+	}
+	.field p {
+		margin: 0;
+	}
+	.field:hover {
+		width: 90%;
+		background-color: var(--color-soft-gray);
+	}
+	.field:hover .tech-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.field:hover p {
+		display: none;
+	}
+	.android {
+		cursor: url("/images/cursors/smartphone.png"), auto;
+	}
+	.web {
+		cursor: url("/images/cursors/world-wide-web.png"), auto;
+	}
+	.github {
+		cursor: url("/images/cursors/merge.png"), auto;
+	}
+	.ux-ui {
+		cursor: url("/images/cursors/graphic-design.png"), auto;
+	}
+	.tech-container {
+		width: 100%;
+		height: 100%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		display: none;
+	}
+	.tech {
+		width: 20%;
+	}
+	.tech-name {
+		font-size: 1.5em;
+	}
+	.about-header {
+		padding: 0;
+		font-size: 2em;
+	}
+	.country-container {
+		margin-left: 2%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		opacity: 1;
+		transform: scale(1);
+	}
+	.country {
+		width: 25%;
+		height: 60%;
+		margin-right: 2%;
+		position: relative;
+		opacity: 0;
+		transition: opacity 3s, transform 2s, background-image 700ms;
+	}
+	.sao-tome,
+	.china {
+		transform: translateY(50%);
+	}
+	.taiwan-roc,
+	.portugal {
+		top: 10%;
+		transform: translateY(-50%);
+	}
+
+	.country.reveal {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	.information {
+		width: 80%;
+	}
+	#contact-header {
+		bottom: 30%;
+	}
+	.contact-option {
+		width: 30%;
+	}
+}
+
+@media only screen and (min-width: 1280px) and (orientation: landscape) {
+	.banner p,
+	#contact-header {
+		font-family: Coves-Bold;
+		font-size: 2.5em;
+		letter-spacing: 1em;
+		padding-left: 1em;
+	}
+	#signature-and-occupation {
+		width: 40%;
+	}
+	#home-picture {
+		width: 50%;
+		height: 90%;
+	}
+	#signature img {
+		width: 100%;
+		position: relative;
+		left: 5%;
+	}
+	#occupation p {
+		font-size: 2.5em;
+		letter-spacing: 0.2em;
+	}
+	.project-link {
+		width: 60%;
+	}
+	.tech-icon img {
+		width: 20%;
+	}
+	#description {
+		font-size: 2em;
+	}
+	#description p {
+		height: 150px;
+	}
+	.project-link a {
+		font-size: 2rem;
+	}
+	#white-layer {
+		width: 120%;
+	}
+	.information h5 {
+		font-size: 2em;
+	}
+	.information p {
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.banner p,
+	#contact-header {
+		font-family: Coves-Bold;
+		font-size: 3.5em;
+		letter-spacing: 2em;
+		padding-left: 2em;
+	}
+	#occupation p {
+		font-size: 3em;
+		letter-spacing: 0.5em;
+	}
+	#description {
+		font-size: 3em;
+	}
+	#description p {
+		height: 250px;
+	}
+	.project-link a {
+		font-size: 3rem;
+	}
+	.about-header {
+		font-size: 3em;
+	}
+	.information h5 {
+		font-size: 3em;
+	}
+	.information p {
+		font-size: 2.5em;
+	}
+	.contact-option a {
+		width: 50%;
+		height: 150px;
+		padding: 5%;
+		border-radius: 100px;
+		font-size: 2em;
+	}
+	#footer {
+		font-size: 70px;
+		font-size: 60px;
+	}
+}
+
+/*Adjusting heights of certain sections, 
+links and vertical paddings/margins*/
+@media only screen and (min-height: 320px) and (orientation: landscape) {
+	.home-message-container {
+		flex-direction: row;
+		justify-content: center;
+	}
+	#portfolio,
+	#technologies {
+		height: 700vh;
+	}
+	#about {
+		height: 1000vh;
+	}
+	.contact-option a {
+		height: 55px;
+	}
+	#option1 {
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (min-height: 700px) and (orientation: landscape) {
+	#technologies {
+		height: 100vh;
+	}
+	#portfolio,
+	#about {
+		height: 150vh;
+	}
+	#about-content {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.country-container {
+		height: 70%;
+	}
+	.contact-option a {
+		height: 70px;
+	}
+	#option1 {
+		margin-bottom: 50px;
+	}
+}
+
+@media only screen and (min-height: 700px) and (orientation: portrait) {
+	#portfolio,
+	#technologies {
+		height: 250vh;
+	}
+	#about {
+		height: 300vh;
+	}
+	.country {
+		width: 80%;
+	}
+	.contact-option a {
+		height: 80px;
+	}
+	#option1 {
+		margin-bottom: 30px;
+	}
+}
