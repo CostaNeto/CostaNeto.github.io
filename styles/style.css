@@ -850,7 +850,8 @@ main {
 }
 
 /*Adjusting heights of certain sections,
-links and vertical paddings/margins*/
+links and vertical paddings/margins
+in distinct landscape heights*/
 @media only screen and (min-height: 250px) and (orientation: landscape) {
 	.home-message-container {
 		flex-direction: row;
