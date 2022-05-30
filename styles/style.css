@@ -718,7 +718,6 @@ main {
 		font-size: 2em;
 	}
 	.country-container {
-		margin-left: 2%;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
@@ -728,7 +727,6 @@ main {
 	.country {
 		width: 25%;
 		height: 60%;
-		margin-right: 2%;
 		position: relative;
 		opacity: 0;
 		transition: opacity 3s, transform 2s, background-image 700ms;
@@ -748,7 +746,13 @@ main {
 		transform: translateY(0);
 	}
 	.information {
-		width: 80%;
+		width: 60%;
+	}
+	.information h5 {
+		font-size: 1.5em;
+	}
+	.information p {
+		font-size: 1em;
 	}
 	#contact-header {
 		bottom: 30%;
@@ -876,13 +880,13 @@ in distinct landscape heights*/
 	}
 }
 
-@media only screen and (min-height: 450px) and (orientation: landscape) {
-	#technologies {
-		height: 100vh;
-	}
+@media only screen and (min-height: 430px) and (orientation: landscape) {
 	#portfolio,
+	#technologies {
+		height: 500vh;
+	}
 	#about {
-		height: 150vh;
+		height: 800vh;
 	}
 	#about-content {
 		flex-direction: column;
@@ -896,6 +900,16 @@ in distinct landscape heights*/
 	}
 	#option1 {
 		margin-bottom: 50px;
+	}
+}
+
+@media only screen and (min-height: 550px) and (orientation: landscape) {
+	#portfolio,
+	#technologies {
+		height: 110vh;
+	}
+	#about {
+		height: 120vh;
 	}
 }
 
