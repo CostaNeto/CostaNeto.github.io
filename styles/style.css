@@ -858,6 +858,7 @@ in distinct landscape heights*/
 	.home-message-container {
 		flex-direction: row;
 		justify-content: center;
+		align-items: center;
 	}
 	#portfolio,
 	#technologies {
