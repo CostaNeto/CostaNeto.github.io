@@ -726,7 +726,7 @@ main {
 	}
 	.country {
 		width: 25%;
-		height: 60%;
+		height: 80%;
 		position: relative;
 		opacity: 0;
 		transition: opacity 3s, transform 2s, background-image 700ms;
