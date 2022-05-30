@@ -569,11 +569,11 @@ main {
 		justify-content: space-between;
 	}
 	.projects {
-		max-width: 30vw;
-		max-height: 30vw;
-		height: auto;
+		width: 30vw;
+		height: 30vw;
 		display: grid;
-		grid-template-columns: 12.5vw 12.5vw;
+		grid-template-columns: 14vw 14vw;
+		grid-template-rows: 14vw 14vw;
 		grid-gap: 2vw;
 		opacity: 0;
 		transform: translate(-50%, -40%) rotateZ(-45deg);
