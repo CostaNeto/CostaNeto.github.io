@@ -584,9 +584,7 @@ main {
 	.project {
 		padding: 15%;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		align-items: flex-start;
 		border-radius: 50%;
 		transition: background-color 0.5s;
 	}
@@ -598,7 +596,7 @@ main {
 	}
 	.project img {
 		width: 100%;
-		height: 100%;
+		height: auto;
 		margin: 0;
 	}
 	.project-details {
